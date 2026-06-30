@@ -7,8 +7,8 @@ Act as a rigorous senior Perl SDET. Write a comprehensive set of white-box subte
 
 # TEST ARCHITECTURE & LIBRARIES
 - Use `Test::Most`.
-- Use `Test::Mockingbird` (interface via `~/src/njh/Test-Mockingbird`) to mock all non-core functions, including other functions within the same module.
-- Use `Test-Returns` (interface via `~/src/njh/Test-Returns`) to validate return values.
+- Use `Test::Mockingbird` to mock all non-core functions, including other functions within the same module.
+- Use `Test::Returns` to validate return values.
 - Use `Test::Memory::Cycle` to verify internal data states and ensure the garbage collector can clean up internal variables (no memory leaks).
 
 # TEST COVERAGE & MECHANICS
@@ -24,4 +24,3 @@ Act as a rigorous senior Perl SDET. Write a comprehensive set of white-box subte
 - Eliminate magic numbers and strings: Use `Readonly` or a `%config` hash.
 - Write meaningful and very easy to understand comments explaining the *purpose* and *strategy* of each subtest. Do not over-comment obvious code.
 - If `./t/function.t` already exists, review its contents first before appending or modifying.
-
